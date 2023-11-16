@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Purchasing;
 
-namespace Viter.Localization
+namespace Viter.IAPSystem
 {
     public class PurchaseHandler : MonoBehaviour
     {
