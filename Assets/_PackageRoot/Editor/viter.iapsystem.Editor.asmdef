@@ -1,0 +1,9 @@
+{
+	"name": "viter.iapsystem.Editor",
+	"references": [
+        "viter.singleton",
+		"viter.iapsystem",
+		"UnityEngine.Purchasing",
+        "UnityEngine.Purchasing.Stores"
+		]
+}
