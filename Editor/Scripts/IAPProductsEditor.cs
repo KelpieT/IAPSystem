@@ -32,6 +32,7 @@ namespace Viter.IAPSystem
             serializedObject.ApplyModifiedProperties();
 
             // if (GUI.changed)
+            if (GUILayout.Button("Prepare for save"))
             {
                 EditorUtility.SetDirty(iapProducts);
             }
