@@ -13,12 +13,21 @@ MonoBehaviour:
   m_Name: IAPProducts
   m_EditorClassIdentifier: 
   productInfos:
-  - productName: 
+  - productName: asd
     overrideStoreIds: 0
     iOSSku: 
     googleSku: 
     amazonSku: 
     samsungSku: 
     productType: 0
-    rewardType: 0
-    rewardAmount: 0
+    rewardType: 1
+    rewardAmount: 123
+  - productName: ddd
+    overrideStoreIds: 0
+    iOSSku: 
+    googleSku: 
+    amazonSku: 
+    samsungSku: 
+    productType: 0
+    rewardType: 1
+    rewardAmount: 123
