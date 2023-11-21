@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Collections;
-using System.IO;
+﻿#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 
@@ -207,3 +205,5 @@ namespace Viter.IAPSystem
         }
     }
 }
+
+#endif
