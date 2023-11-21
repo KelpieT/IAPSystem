@@ -1,10 +1,10 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+using UnityEngine;
 using UnityEditor;
-using UnityEngine.UI;
 
 namespace Viter.IAPSystem
 {
-	[CustomEditor(typeof(UnityIAPButton))]
+    [CustomEditor(typeof(UnityIAPButton))]
 	public class UnityIAPButtonEditor : Editor
 	{
 		private bool cache = false;
@@ -58,3 +58,4 @@ namespace Viter.IAPSystem
 		}
 	}
 }
+#endif
