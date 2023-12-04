@@ -11,7 +11,7 @@ namespace Viter.IAPSystem
     /// This class controlls ingame purchased and its reward. This sdk typically leverages the offical unity iap sdk and used as wrapper to make workflow
     /// simple that suits the asset store plugin and anyone without developement skills can easily configure this setup.
     /// </summary>
-    public class IAPManager : Singleton<IAPManager> , IDetailedStoreListener
+    public class IAPManager : Singleton<IAPManager>, IDetailedStoreListener
     {
         private IAPProducts iapManager;
         private bool hasInitialised = false;
@@ -175,7 +175,7 @@ namespace Viter.IAPSystem
         {
             if (hasUnityIAPSdkInitialised)
             {
-                extensionProvider.GetExtension<IAppleExtensions>().RestoreTransactions((result,stringRes) =>
+                extensionProvider.GetExtension<IAppleExtensions>().RestoreTransactions((result, stringRes) =>
                 {
                     if (OnRestoreCompletedEvent != null)
                     {
@@ -250,7 +250,10 @@ namespace Viter.IAPSystem
 
         public void OnPurchaseFailed(Product product, PurchaseFailureDescription failureDescription)
         {
-            throw new NotImplementedException();
+            if (OnPurchaseFailedEvent != null)
+            {
+                OnPurchaseFailedEvent.Invoke(failureDescription.reason.ToString());
+            }
         }
     }
 }
