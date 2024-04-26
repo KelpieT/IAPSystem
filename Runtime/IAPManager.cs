@@ -13,6 +13,7 @@ namespace Viter.IAPSystem
     /// </summary>
     public class IAPManager : Singleton<IAPManager>, IDetailedStoreListener
     {
+        public bool manualInitialization = false;
         private IAPProducts iapManager;
         private bool hasInitialised = false;
 
@@ -33,7 +34,10 @@ namespace Viter.IAPSystem
         protected override void Awake()
         {
             base.Awake();
-            Initialise();
+            if (!manualInitialization)
+            {
+                Initialise();
+            }
         }
 
         /// <summary>
@@ -42,7 +46,10 @@ namespace Viter.IAPSystem
         /// </summary>
         private void Start()
         {
-            InitializeUnityIAP();
+            if (!manualInitialization)
+            {
+                InitializeUnityIAP();
+            }
         }
 
         /// <summary>
