@@ -111,7 +111,7 @@ namespace Viter.IAPSystem
         }
 
         // Start Initialization of IAP SDK.
-        private void Initialise()
+        public void Initialise()
         {
             if (!hasInitialised)
             {
